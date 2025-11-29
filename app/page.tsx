@@ -1,0 +1,44 @@
+import CompanionCard from "@/components/CompanionCard";
+import CompanionsList from "@/components/CompanionsList";
+import CTA from "@/components/CTA";
+import {recentSessions} from "@/constants";
+import {getAllCompanions, getRecentSessions, getUserCompanions, getUserSessions} from "@/lib/actions/companion.actions";
+import {getSubjectColor} from "@/lib/utils";
+import { currentUser } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
+
+const Page = async () => {
+   const user = await currentUser();
+    if(!user) redirect('/sign-in');
+
+    const companions = await getUserCompanions(user.id);
+    const recentSessionsCompanions = await getUserSessions(user.id);
+
+  return (
+    <main>
+      <h1>Popular Companions</h1>
+
+        <section className="home-section">
+            {companions.map((companion) => (
+                <CompanionCard
+                    key={companion.id}
+                    {...companion}
+                    color={getSubjectColor(companion.subject)}
+                />
+            ))}
+
+        </section>
+
+        <section className="home-section">
+            <CompanionsList
+                title="Recently completed sessions"
+                companions={recentSessionsCompanions}
+                classNames="w-2/3 max-lg:w-full"
+            />
+            <CTA />
+        </section>
+    </main>
+  )
+}
+
+export default Page
