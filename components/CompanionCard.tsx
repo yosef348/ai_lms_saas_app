@@ -33,7 +33,7 @@ const CompanionCard = ({
     }
   };
   return (
-    <article className="companion-card" style={{ backgroundColor: color }}>
+    <article className="companion-card hover:scale-[1.02] hover:shadow-md">
       <div className="flex justify-between items-center">
         <div className="subject-badge">{subject}</div>
         <button className="companion-bookmark" onClick={handleBookmark}>
@@ -48,9 +48,9 @@ const CompanionCard = ({
         </button>
       </div>
 
-      <h2 className="text-2xl font-bold">{name}</h2>
-      <p className="text-sm">{topic}</p>
-      <div className="flex items-center gap-2">
+      <h2 className="text-2xl font-bold text-foreground">{name}</h2>
+      <p className="text-sm text-muted-foreground">{topic}</p>
+      <div className="flex items-center gap-2 text-muted-foreground">
         <Image
           src="/icons/clock.svg"
           alt="duration"
