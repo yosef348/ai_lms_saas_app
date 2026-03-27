@@ -47,8 +47,10 @@ const clerkAppearance = {
     identityPreview: 'bg-[var(--background)] border border-[var(--border)] rounded-xl',
 
     // UserButton / Popovers
-    userButtonPopoverCard: 'bg-[var(--card)] border border-[var(--border)] rounded-2xl shadow-sm',
-    userButtonPopoverActionButton: 'hover:bg-[var(--accent)]',
+    userButtonPopoverCard: 'bg-[var(--card)] border border-[var(--border)] rounded-2xl shadow-md text-[var(--foreground)]',
+    userButtonPopoverActionButton: 'text-[var(--foreground)] hover:bg-primary/10 rounded-xl',
+    // best-effort additional targets (ignored safely if unknown)
+    userButtonPopoverActionButtonText: 'text-[var(--foreground)]',
     navbar: 'hidden',
     scrollBox: 'rounded-2xl',
 
