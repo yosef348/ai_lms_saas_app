@@ -347,11 +347,4 @@ body {
 }
 /* Add spacing + depth */
 
-.cl-cardBox {
-    padding: 20px !important;
-}
 
-.cl-rootBox {
-    display: flex;
-    justify-content: center;
-}
