@@ -347,4 +347,15 @@ body {
 }
 /* Add spacing + depth */
 
-
+@media (min-width: 768px) {
+    .cl-pricingTable {
+        display: flex !important;
+        justify-content: center !important;
+        flex-direction: row !important;
+    }
+    .cl-pricingTable-root {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+}
