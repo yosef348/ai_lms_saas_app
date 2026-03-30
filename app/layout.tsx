@@ -13,16 +13,24 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Converso",
+  title: "Learnova AI",
   description: "Real-time AI Teaching Platform",
+  icons: {
+    icon: "/images/logo.svg",
+    apple: "/images/logo.svg",
+    other: {
+      rel: "shortcut icon",
+      url: "/images/logo.svg",
+    },
+  },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { userId } = auth();
+  const { userId } = await auth();
   const isAuthed = !!userId;
   return (
     <html lang="en">

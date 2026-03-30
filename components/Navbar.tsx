@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar">
       <Link href="/">
         <div className="flex items-center gap-2.5 cursor-pointer">
-          <span className="text-2xl text-muted-foreground text-purple-600">Converso</span>
+          <span className="text-2xl text-muted-foreground text-purple-600">Learnova AI</span>
         </div>
       </Link>
       <div className="flex items-center gap-4">
