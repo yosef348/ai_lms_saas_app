@@ -3,9 +3,11 @@ import { Bricolage_Grotesque } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/Sidebar";
+import AuthLayout from "@/components/AuthLayout";
+import SheetWrapper from "@/components/SheetWrapper";
 import clerkAppearance from "@/components/clerkAppearance";
 import { auth } from "@clerk/nextjs/server";
+import { SidebarProvider } from "@/components/SidebarContext";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -36,15 +38,19 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`${bricolage.variable} antialiased dark bg-[var(--background)] text-[var(--foreground)]`}>
         <ClerkProvider appearance={clerkAppearance}>
-          <Navbar />
-          {isAuthed ? (
-            <div className="flex w-full max-w-[1400px] mx-auto">
-              <Sidebar />
-              <div className="flex-1 min-w-0">{children}</div>
-            </div>
-          ) : (
-            <div className="w-full max-w-[1400px] mx-auto">{children}</div>
-          )}
+          <SidebarProvider>
+            {isAuthed ? (
+              <SheetWrapper>
+                <Navbar />
+                <AuthLayout>{children}</AuthLayout>
+              </SheetWrapper>
+            ) : (
+              <>
+                <Navbar />
+                <div className="w-full max-w-[1400px] mx-auto">{children}</div>
+              </>
+            )}
+          </SidebarProvider>
         </ClerkProvider>
       </body>
     </html>
