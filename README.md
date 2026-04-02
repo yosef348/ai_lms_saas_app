@@ -2,13 +2,13 @@
 
 A real-time AI-powered teaching platform that enables personalized learning through interactive AI companions.
 
-## 🚀 Overview
+##  Overview
 
 Learnova AI is an innovative educational platform that leverages artificial intelligence to create personalized learning experiences. Users can interact with AI companions through voice conversations, build custom companions for specific subjects and topics, and track their learning progress through a comprehensive dashboard.
 
 The platform is designed for students, educators, and lifelong learners who want adaptive, conversational learning experiences tailored to their needs.
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Next.js 16** - React framework with App Router
@@ -35,7 +35,7 @@ The platform is designed for students, educators, and lifelong learners who want
 - **ESLint** - Code linting
 - **Turbopack** - Fast bundler (Next.js dev mode)
 
-## 🔋 Features
+##  Features
 
 ### Core Learning Features
 - **AI Companions**: Interactive AI tutors for various subjects (Math, Science, Language, History, Coding, etc.)
@@ -60,14 +60,7 @@ The platform is designed for students, educators, and lifelong learners who want
 - **Live Voice Sessions**: Real-time voice interactions
 - **Bookmark System**: Save favorite companions for quick access
 
-## 📸 Screenshots
-
-![Dashboard](./public/readme/hero.png)
-![Companion Library](./public/readme/jsmpro.jpg)
-![Learning Session](./public/readme/thumbnail.png)
-![Video Features](./public/readme/videokit.jpg)
-
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 - Node.js 18+
@@ -111,7 +104,7 @@ npm run build
 npm start
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ai_lms_saas_app/
@@ -135,7 +128,7 @@ ai_lms_saas_app/
 └── ...
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
